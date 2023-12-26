@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            background-image: url("E:\\NASA Files\\image\\DSC02602.JPG");
+            background-size: cover;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank you for your feedback!</h1>
+    <p>Your feedback has been recorded.</p>
+    <a href="{% url 'feedback_form' %}">Go back to the form</a>
+</body>
+</html>

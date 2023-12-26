@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+    <style>
+        body {
+            background-image: url("E:\\NASA Files\\image\\DSC02602.JPG");
+            background-size: cover;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="{% url 'feedback_form' %}">
+        {% csrf_token %}
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
+
+        <label for="class_name">Class:</label>
+        <input type="text" id="class_name" name="class_name" required>
+
+        <label for="section_name">Section:</label>
+        <input type="text" id="section_name" name="section_name" required>
+
+        <label for="relationship">Relationship with Guardians:</label>
+        <input type="text" id="relationship" name="relationship" required>
+
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" required>
+
+        <label for="guardian_review">Review from Guardian:</label>
+        <input type="text" id="guardian_review" name="guardian_review" required>
+
+        <label for="interviewer_review">Review from Interviewer:</label>
+        <input type="text" id="interviewer_review" name="interviewer_review" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
